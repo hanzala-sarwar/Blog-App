@@ -7,6 +7,7 @@ import CommentList from "../comments/comment-list";
 import { prisma } from "@/lib/prisma";
 import LikeButton from "./actions/like-button";
 import { auth } from "@clerk/nextjs/server";
+import type { User } from "@prisma/client";
 
 type ArticleDetailPageProps = {
   article: Prisma.ArticlesGetPayload<{
@@ -43,7 +44,8 @@ export async function ArticleDetailPage({ article }: ArticleDetailPageProps) {
   });
   const { userId } = await auth();
 
-  let user = null;
+  // let user = null;
+  let user: User | null = null;
   let isLiked = false;
 
   if (userId) {
