@@ -44,7 +44,7 @@ export async function ArticleDetailPage({ article }: ArticleDetailPageProps) {
   });
   const { userId } = await auth();
 
-  // let user = null;
+   
   let user: User | null = null;
   let isLiked = false;
 

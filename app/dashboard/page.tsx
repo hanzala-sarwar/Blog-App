@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { BlogDashboard } from '@/components/dashboard/dashboard-page'
 import React from 'react'
 

@@ -1,6 +1,6 @@
- # 🚀 WriteSphere : Blog App
+# 🚀 WriteSphere : AI Powered Blog App
 
-A modern full-stack Blog Application built with **Next.js, PostgreSQL, Prisma, ShadCN UI, and Clerk Authentication**. Users can create accounts, publish blogs, interact with posts through likes and comments, and explore content with search and pagination.
+A modern full-stack AI-powered Blog Application built with **Next.js, PostgreSQL, Prisma, ShadCN UI, Clerk Authentication, and Groq AI**. Users can create accounts, publish blogs, improve content with AI, interact with posts through likes and comments, and explore content with search and pagination.
 
 ---
 
@@ -8,23 +8,29 @@ A modern full-stack Blog Application built with **Next.js, PostgreSQL, Prisma, S
 
 * 🔐 User authentication with Clerk
 * 📝 Create, edit, and delete blog posts
+* 🤖 AI-powered content improvement with Groq API
+* ✨ Fix grammar, spelling, and improve article clarity using AI
 * ❤️ Like blog posts
 * 💬 Comment on blogs
 * 🔍 Search articles
 * 📄 Pagination for better performance
 * ☁️ Image upload & storage with Cloudinary
 * ⚡ Server Actions for efficient data handling
-* 🎨 Modern UI with ShadCN
+* 🎨 Modern UI with ShadCN UI
+* 🧠 Rich text editor with React Quill
 
 ---
 
 ## 🛠️ Tech Stack
 
 * **Framework:** Next.js (App Router)
+* **Language:** TypeScript
 * **Database:** PostgreSQL
 * **ORM:** Prisma
 * **Authentication:** Clerk
-* **UI:** ShadCN UI
+* **AI Integration:** Groq API
+* **UI Library:** ShadCN UI
+* **Rich Text Editor:** React Quill
 * **Image Storage:** Cloudinary
 * **Backend Logic:** Server Actions
 
@@ -34,7 +40,9 @@ A modern full-stack Blog Application built with **Next.js, PostgreSQL, Prisma, S
 
 ```bash
 git clone https://github.com/hanzala-sarwar/blog-app.git
+
 cd blog-app
+
 npm install
 ```
 
@@ -45,9 +53,11 @@ npm install
 Create a `.env` file and add:
 
 ```env
+# Database
 DATABASE_URL=your_postgresql_url
+DIRECT_URL=your_direct_database_url
 
-# Clerk
+# Clerk Authentication
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_key
 CLERK_SECRET_KEY=your_secret
 
@@ -55,6 +65,9 @@ CLERK_SECRET_KEY=your_secret
 CLOUDINARY_CLOUD_NAME=your_name
 CLOUDINARY_API_KEY=your_key
 CLOUDINARY_API_SECRET=your_secret
+
+# Groq AI
+GROQ_API_KEY=your_groq_api_key
 ```
 
 ---
@@ -67,7 +80,7 @@ npm run dev
 
 App runs on:
 
-```
+```bash
 http://localhost:3000
 ```
 
@@ -75,22 +88,43 @@ http://localhost:3000
 
 ## 📁 Project Structure
 
-```
+```bash
 /app            → Next.js App Router
-/components     → UI Components (ShadCN)
+/components     → Reusable UI Components
 /actions        → Server Actions
-/prisma         → Database schema
-/lib            → Utilities & configs
+/prisma         → Database Schema & Migrations
+/lib            → Utilities & Configurations
+/public         → Static Assets
 ```
+
+---
+
+## 🤖 AI Content Improvement
+
+WriteSphere includes an AI-powered writing assistant using the **Groq API**.
+
+Users can:
+
+* Improve grammar and spelling
+* Enhance readability and clarity
+* Keep original HTML formatting intact
+* Generate cleaner and more professional blog content instantly
+
+Powered by:
+
+* `llama-3.3-70b-versatile`
 
 ---
 
 ## 🔥 Key Highlights
 
-* Uses **Server Actions** instead of traditional APIs
-* Optimized queries with **Prisma ORM**
-* Clean and reusable UI components with **ShadCN**
-* Scalable and production-ready structure
+* Uses **Server Actions** instead of traditional REST APIs
+* Fully built with **Next.js App Router**
+* Optimized database queries using **Prisma ORM**
+* Secure authentication with **Clerk**
+* AI-assisted content writing workflow
+* Clean and reusable UI components with **ShadCN UI**
+* Scalable and production-ready architecture
 
 ---
 
@@ -98,7 +132,7 @@ http://localhost:3000
 
 **hanzala-sarwar**
 
-* GitHub: https://github.com/hanzala-sarwar
+* GitHub: :contentReference[oaicite:0]{index=0}
 
 ---
 
@@ -106,4 +140,4 @@ http://localhost:3000
 
 If you like this project, give it a ⭐ on GitHub!
 
----
+--- 
